@@ -1,5 +1,5 @@
 [servers]
-192.168.56.101
+Server1 ansible_host=192.168.56.101
 
 [centOS]
-192.168.56.102
+centOS ansible_host=192.168.56.102
