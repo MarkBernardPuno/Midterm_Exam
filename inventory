@@ -2,4 +2,4 @@
 Server1 ansible_host=192.168.56.101 ansible_user=Puno ansible_become_pass=123
 
 [CentOS]
-CentOS ansible_host=192.168.56.102 ansible_user=mpuno ansible_become_pass=mpuno
+CentOS ansible_host=192.168.56.102 ansible_user=mpuno ansible_become_pass=markpuno
