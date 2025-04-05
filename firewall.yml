@@ -13,7 +13,7 @@
       ansible.builtin.yum:
         name: firewalld
         state: present
-      when: ansible_distribution == 'CentOS'
+      when: ansible_distribution == 'centOS'
 
     - name: Enable firewall
       ansible.builtin.shell:
