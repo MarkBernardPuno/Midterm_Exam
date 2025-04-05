@@ -1,0 +1,20 @@
+---
+- name: Set up firewall
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Install UFW on Ubuntu
+      ansible.builtin.apt:
+        name: ufw
+        state: present
+      when: ansible_distribution == 'Ubuntu'
+
+    - name: Install firewalld on CentOS
+      ansible.builtin.yum:
+        name: firewalld
+        state: present
+      when: ansible_distribution == 'CentOS'
+
+    - name: Enable firewall
+      ansible.builtin.shell:
+        cmd: "{{ 'ufw enable' if ansible_distribution == 'Ubuntu' else 'systemctl start firewalld' }}"
